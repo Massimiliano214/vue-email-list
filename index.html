@@ -12,7 +12,7 @@
     <div id="app">
         <main>
             <ul>
-                <li v-for="emailGenerated.length < 10">{{emailGenerated.email}}</li>
+                <li v-for="(email, index) in emailGenerated">{{emailGenerated[index]}}</li>
             </ul>
         </main>
         
