@@ -4,16 +4,7 @@ createApp({
   data() {
     return {
       emailGenerated: [
-        primaEmail = "",
-        secondaEmail = "",
-        terzaEmail = "",
-        quartaEmail = "",
-        quintaEmail = "",
-        sestaEmail = "",
-        settimaEmail = "",
-        ottavaEmail = "",
-        nonaEmail = "",
-        decimaEmail = "",
+
       ]
     }
   },
@@ -28,9 +19,8 @@ createApp({
         console.log(response);
         //this.emailGenerated.primaEmail = response.data.response;
 
-        this.emailGenerated.forEach((element, index) => {
-            element = response.data.response;
-        });
+        this.emailGenerated.push(response.data.response);
+        console.log(this.emailGenerated);
     })
   }
 }).mount('#app')
